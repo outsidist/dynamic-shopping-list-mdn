@@ -29,11 +29,13 @@ const dinosaurImageDiv = document.querySelector('#dinosaurImage');
 dinosaurButton.addEventListener('click', () => {
   if (dinosaurImageDiv.querySelector('img')) {
     dinosaurImageDiv.innerHTML = '';
+    dinosaurButton.textContent = 'Dinosaur';
   } else {
 
   const image = document.createElement('img');
   image.src = 'dinosaur.png';
   image.alt = 'mdn dinosaur';
   dinosaurImageDiv.appendChild(image);
+  dinosaurButton.textContent = 'Hide Dinosaur';
   }
 });
